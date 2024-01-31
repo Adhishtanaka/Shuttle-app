@@ -9,24 +9,24 @@ class BusUi extends StatefulWidget {
   const BusUi({super.key});
 
   @override
-  State<BusUi> createState() => _BusUiState();
+  State<BusUi> createState() => license();
 }
 
-class _BusUiState extends State<BusUi> {
+class license extends State<BusUi> {
   final User? user = Account().currentUser;
   LocationData? currentLocation;
   bool isTrackingLocation = false;
   final database = FirebaseDatabase.instance.ref();
   int index = 0;
   late Timer locationUpdateTimer;
-  String selectedMessage = 'Normal';
+  String selectedMessage = 'To NSBM';
   String blpnum = '';
  
   @override
   void initState() {
     super.initState();
      
-    locationUpdateTimer = Timer.periodic(const Duration(seconds: 10), (timer) {
+    locationUpdateTimer = Timer.periodic(const Duration(seconds: 5), (timer) {
       if (isTrackingLocation) {
         uploadLocation();
       }
@@ -44,6 +44,7 @@ class _BusUiState extends State<BusUi> {
     super.dispose();
   }
 
+  //update bus message
   Future<void> updateBusMessage(String messageType) async {
     final userDatabase = database.child('users/${user?.uid ?? 'unknown'}');
 
@@ -52,6 +53,7 @@ class _BusUiState extends State<BusUi> {
     });
   }
 
+//update bus status offline or not
   Future<void> updateStatus(int status) async {
     final userDatabase = database.child('users/${user?.uid ?? 'unknown'}');
 
@@ -60,6 +62,7 @@ class _BusUiState extends State<BusUi> {
     });
   }
 
+//get bus licence plate number
 Future<void> getBusBLP() async {
     final userDatabase = database.child('users/${user?.uid ?? 'unknown'}');
     userDatabase.child('blpnumber').onValue.listen((event) {
@@ -74,7 +77,7 @@ Future<void> getBusBLP() async {
     });
   }
   
-
+  //updating bus location using gpu
   Future<void> updateLocation() async {
     Location location = Location();
     location.getLocation().then((locationData) {
@@ -93,6 +96,7 @@ Future<void> getBusBLP() async {
     });
   }
 
+   //uploading that updated location to firebase
   Future<void> uploadLocation() async {
     final userDatabase = database.child('users/${user?.uid ?? 'unknown'}');
 
@@ -108,6 +112,7 @@ Future<void> getBusBLP() async {
     }
   }
 
+  //this for location share button
   void toggleLocationTracking() {
     setState(() {
       isTrackingLocation = !isTrackingLocation;
@@ -123,10 +128,12 @@ Future<void> getBusBLP() async {
     }
   }
 
+  //signout function from account model
   Future<void> signOut() async {
     await Account().signOut();
   }
 
+ //widget locationbutton
   Widget _toggleLocationButton() {
     return ElevatedButton(
       onPressed: toggleLocationTracking,
@@ -134,13 +141,15 @@ Future<void> getBusBLP() async {
     );
   }
 
+  //signout button widget
   Widget _signOutButton() {
     return ElevatedButton(
       onPressed: signOut,
       child: const Text('Sign Out'),
     );
   }
-
+  
+  //location text widget
   Widget _locationInfoText() {
     if (currentLocation != null) {
       return Text(
@@ -152,6 +161,7 @@ Future<void> getBusBLP() async {
     }
   }
 
+  //email text widget
   Widget _UserEmail() {
     return Text(
       user?.email ?? '',
@@ -159,8 +169,9 @@ Future<void> getBusBLP() async {
     );
   }
 
-Widget _buildMessageDropdown() {
-  List<String> messageOptions = ['Normal', 'Delay', 'Emergency'];
+  //dropdown button widget
+ Widget _buildMessageDropdown() {
+  List<String> messageOptions = ['To NSBM', 'Delay', 'Emergency','From NSBM'];
 
   return DropdownButton<String>(
     value: selectedMessage, 
@@ -180,7 +191,7 @@ Widget _buildMessageDropdown() {
 }
 
 
-
+  //ui
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -203,6 +214,7 @@ Widget _buildMessageDropdown() {
     );
   }
 
+  //bottomnavbar 
   Widget _getPage(int index) {
     switch (index) {
       case 0:

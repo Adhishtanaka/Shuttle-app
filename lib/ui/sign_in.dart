@@ -74,6 +74,8 @@ class _SignInState extends State<SignIn> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+             const Image(image: AssetImage('assets/logo1.png')),
+      
             _entryField('Driver Email', _controllerEmail),
             _entryField('Password', _controllerPassword),
             _errorMessage(),

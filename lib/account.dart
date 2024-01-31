@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class Account {
 
+   //its a class that make a simple model of sign in signout system
     final FirebaseAuth _auth = FirebaseAuth.instance;
     User? get currentUser => _auth.currentUser;
     Stream<User?> get authStateChanges => _auth.authStateChanges();

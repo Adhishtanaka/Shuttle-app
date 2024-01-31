@@ -10,6 +10,7 @@ class Auth extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder(
+        //checking sign in status
         stream: Account().authStateChanges,
         builder: (context, snapshot) {
           if (snapshot.hasData) {

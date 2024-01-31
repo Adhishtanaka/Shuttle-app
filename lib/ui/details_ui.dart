@@ -25,6 +25,7 @@ class _DetailsUiState extends State<DetailsUi> {
     fetchBusDetails();
   }
 
+//fetching bus data from firebase
 Future<void> fetchBusDetails() async {
   final busSnapshot = await database.child('users/${widget.uid}').get();
 
@@ -42,7 +43,8 @@ Future<void> fetchBusDetails() async {
     }
   }
 }
-
+  
+  //ui
   @override
   Widget build(BuildContext context) {
     return Scaffold(
