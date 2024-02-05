@@ -26,9 +26,12 @@ class license extends State<BusUi> {
   void initState() {
     super.initState();
      
-    locationUpdateTimer = Timer.periodic(const Duration(seconds: 5), (timer) {
+    locationUpdateTimer = Timer.periodic(const Duration(seconds: 4), (timer) {
       if (isTrackingLocation) {
+         updateStatus(1);
         uploadLocation();
+      }else{
+         updateStatus(0);
       }
     });
     getBusBLP();
@@ -38,9 +41,7 @@ class license extends State<BusUi> {
   @override
   void dispose() {
     locationUpdateTimer.cancel();
-    if (isTrackingLocation) {
-      updateStatus(0);
-    }
+    updateStatus(0);
     super.dispose();
   }
 
@@ -97,20 +98,20 @@ Future<void> getBusBLP() async {
   }
 
    //uploading that updated location to firebase
-  Future<void> uploadLocation() async {
-    final userDatabase = database.child('users/${user?.uid ?? 'unknown'}');
+Future<void> uploadLocation() async {
+  final userDatabase = database.child('users/${user?.uid ?? 'unknown'}');
 
-    if (currentLocation != null) {
-      await userDatabase.update({
-        'location': {
-          'latitude': currentLocation!.latitude,
-          'longitude': currentLocation!.longitude,
-          'speed': currentLocation!.speed
-        },
-      });
-      updateStatus(1);
-    }
+  if (isTrackingLocation && currentLocation != null) { 
+    await userDatabase.update({
+      'location': {
+        'latitude': currentLocation!.latitude,
+        'longitude': currentLocation!.longitude,
+        'speed': currentLocation!.speed
+      },
+    });
+   
   }
+}
 
   //this for location share button
   void toggleLocationTracking() {
@@ -120,11 +121,12 @@ Future<void> getBusBLP() async {
 
     if (isTrackingLocation) {
       updateLocation();
+      updateBusMessage(selectedMessage);
     } else {
       setState(() {
         currentLocation = null;
       });
-      updateStatus(0);
+      
     }
   }
 
