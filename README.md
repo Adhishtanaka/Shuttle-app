@@ -57,6 +57,40 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
 - The Android folder was accidentally removed and is missing from the project.
 - Ensure the `google-services.json` file is correctly placed before running the app.
 
+## Contributors
+
+<table>
+  <tr>
+    <td align="center">
+       <img src="https://github.com/tdulshan3.png" width="80px;" alt="Thusara Dulshan"/><br />
+       <a href="https://github.com/tdulshan3"><sub><b>Thusara Dulshan</b></sub></a>
+    </td>
+    <td align="center">
+       <img src="https://github.com/TanujMalinda.png" width="80px;" alt="Tanuj Malinda"/><br />
+       <a href="https://github.com/TanujMalinda"><sub><b>Tanuj Malinda</b></sub></a>
+    </td>
+      <td align="center">
+       <img src="https://github.com/dilinamewan.png" width="80px;" alt="Dilina Mewan"/><br />
+       <a href="https://github.com/dilinamewan"><sub><b>Dilina Mewan</b></sub></a>
+    </td>
+       </tr>
+      <tr>
+  <td align="center">
+       <img src="https://github.com/Adhishtanaka.png" width="80px;" alt="Adhishtanaka"/><br />
+       <a href="https://github.com/Adhishtanaka"><sub><b>Adhishtanaka</b></sub></a>
+    </td>
+    <td align="center">
+       <img src="https://github.com/Siluni28270.png" width="80px;" alt="Siluni"/><br />
+       <a href="https://github.com/Siluni28270"><sub><b>Siluni</b></sub></a>
+    </td>
+       <td align="center">
+       <img src="https://github.com/Madharaa.png" width="80px;" alt="Madara"/><br />
+       <a href="https://github.com/Madharaa"><sub><b>Madara</b></sub></a>
+    </td>
+  </tr>
+</table>
+
+
 ## License
 
 This project is licensed under the MIT License.
