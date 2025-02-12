@@ -11,7 +11,6 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
 - **Google Maps Integration**: Displays shuttle location and routes using `google_maps_flutter`.
 - **Polyline Routes**: Shows shuttle routes using `flutter_polyline_points`.
 - **Estimated Arrival Time**: Calculates travel time to a selected destination using Google Distance Matrix API.
-- **Shared Preferences**: Stores subscription count locally.
 
 ## Setup Instructions
 
