@@ -20,7 +20,7 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
 
 1. **Clone the Repository**:
    ```sh
-   git clone https://github.com/Adhishtanaka/Shuttle-app
+   git clone https://github.com/Adhishtanaka/Shuttle-app.git
    cd Shuttle-app
    ```
 2. **Install Dependencies**:
@@ -90,10 +90,12 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
   </tr>
 </table>
 
+If you find any bugs or want to suggest improvements, feel free to open an issue or pull request on the [GitHub repository](https://github.com/Adhishtanaka/Shuttle-app/pulls).
 
 ## License
+This project is licensed under the MIT License. See [MIT License](LICENSE) for details.
 
-This project is licensed under the MIT License.
+Made with ❤️ using Flutter.
 
 
 
