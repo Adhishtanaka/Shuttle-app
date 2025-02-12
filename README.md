@@ -77,15 +77,15 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
       <tr>
   <td align="center">
        <img src="https://github.com/Adhishtanaka.png" width="80px;" alt="Adhishtanaka"/><br />
-       <a href="https://github.com/Adhishtanaka"><sub><b>Adhishtanaka</b></sub></a>
+       <a href="https://github.com/Adhishtanaka"><sub><b>Adhishtanaka Kulasooriya</b></sub></a>
     </td>
     <td align="center">
        <img src="https://github.com/Siluni28270.png" width="80px;" alt="Siluni"/><br />
-       <a href="https://github.com/Siluni28270"><sub><b>Siluni</b></sub></a>
+       <a href="https://github.com/Siluni28270"><sub><b>Siluni Sadanima</b></sub></a>
     </td>
        <td align="center">
        <img src="https://github.com/Madharaa.png" width="80px;" alt="Madara"/><br />
-       <a href="https://github.com/Madharaa"><sub><b>Madara</b></sub></a>
+       <a href="https://github.com/Madharaa"><sub><b>Madhara Dulanjali</b></sub></a>
     </td>
   </tr>
 </table>
