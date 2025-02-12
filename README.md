@@ -4,6 +4,10 @@
 
 This Flutter-based shuttle tracking application provides real-time tracking of shuttle buses, displaying their locations on Google Maps, and estimating arrival times for selected destinations.
 
+| Student UI | Driver UI |
+|------------|------------|
+|  <img src="screenshot/s.gif" alt="Student UI" width="300"> |  <img src="screenshot/d.gif" alt="Student UI" width="300"> |
+
 ## Features
 
 - **Real-time Shuttle Tracking**: Updates bus location every few seconds.
