@@ -74,7 +74,7 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
        <a href="https://github.com/dilinamewan"><sub><b>Dilina Mewan</b></sub></a>
     </td>
        </tr>
-      <tr>
+   <tr>
   <td align="center">
        <img src="https://github.com/Adhishtanaka.png" width="80px;" alt="Adhishtanaka"/><br />
        <a href="https://github.com/Adhishtanaka"><sub><b>Adhishtanaka Kulasooriya</b></sub></a>
@@ -86,6 +86,16 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
        <td align="center">
        <img src="https://github.com/Madharaa.png" width="80px;" alt="Madara"/><br />
        <a href="https://github.com/Madharaa"><sub><b>Madhara Dulanjali</b></sub></a>
+    </td>
+  </tr>
+      <tr>
+  <td align="center">
+       <img src="https://github.com/ThilakarathnaMTM.png" width="80px;" alt="Tharuka"/><br />
+       <a href="https://github.com/ThilakarathnaMTM"><sub><b>Tharuka Thilakarathna</b></sub></a>
+    </td>
+    <td align="center">
+       <img src="https://github.com/SheshaniWimarshana.png" width="80px;" alt="Sheshani"/><br />
+       <a href="https://github.com/SheshaniWimarshana"><sub><b>Sheshani Wimarshana</b></sub></a>
     </td>
   </tr>
 </table>
