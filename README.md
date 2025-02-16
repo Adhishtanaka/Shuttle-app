@@ -11,7 +11,7 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
 ## Features
 
 - **Real-time Shuttle Tracking**: Updates bus location every few seconds.
-- **Firebase Integration**: Uses Firebase Realtime Database for location updates, and status tracking.
+- **Firebase Integration**: Uses Firebase,Auth,Storage & Realtime Database for authentification,location updates, and status tracking.
 - **Google Maps Integration**: Displays shuttle location and routes using `google_maps_flutter`.
 - **Polyline Routes**: Shows shuttle routes using `flutter_polyline_points`.
 - **Estimated Arrival Time**: Calculates travel time to a selected destination using Google Distance Matrix API.
@@ -90,6 +90,10 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
     <td align="center">
        <img src="https://github.com/SheshaniWimarshana.png" width="80px;" alt="Sheshani"/><br />
        <a href="https://github.com/SheshaniWimarshana"><sub><b>Sheshani Wimarshana</b></sub></a>
+    </td>
+         <td align="center">
+       <img src="https://github.com/Nethmijayasinghee.png" width="80px;" alt="Nethmi"/><br />
+       <a href="https://github.com/Nethmijayasinghee"><sub><b>Nethmi Jayasinghee</b></sub></a>
     </td>
   </tr>
 </table>
