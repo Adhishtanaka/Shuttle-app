@@ -250,7 +250,7 @@ Future<void> uploadLocation() async {
       children: <Widget>[
         
         Text(
-          "Licence Plate Number : " + blpnum,
+          "Licence Plate Number : $blpnum",
         
           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),

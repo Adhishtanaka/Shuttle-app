@@ -4,7 +4,7 @@ import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:shuttle_v1/ui/map_ui.dart';
 
 class StudUi extends StatefulWidget {
-  const StudUi({Key? key}) : super(key: key);
+  const StudUi({super.key});
 
   @override
   State<StudUi> createState() => _StudUiState();

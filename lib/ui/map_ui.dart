@@ -32,7 +32,7 @@ class estimated extends State<MapUi> {
   late PolylinePoints polylinePoints;
   late List<LatLng> polylineCoordinates = [];
   late SharedPreferences prefs;
-  late LatLng tappedPosition = LatLng(0.0, 0.0);
+  late LatLng tappedPosition = const LatLng(0.0, 0.0);
   late bool timeModeOn;
   late bool animatePause = false;
 
@@ -101,10 +101,9 @@ class estimated extends State<MapUi> {
 
   //fetch & upload subscriber count by increasing one
   Future<void> fetchSubUpdate() async {
-    print("Checking SharedPreferences for 'sub' value");
+    //print("Checking SharedPreferences for 'sub' value");
     if (prefs.getInt('sub') == null) {
-      print(
-          "'sub' value not found in SharedPreferences. Fetching from database.");
+      //print("'sub' value not found in SharedPreferences. Fetching from database.");
       final subSnapshot = await database.child('users/${widget.uid}/sub').get();
 
       if (subSnapshot.value != null) {
@@ -116,11 +115,10 @@ class estimated extends State<MapUi> {
         await database.child('users/${widget.uid}/sub').set(sub);
 
         prefs.setInt('sub', sub);
-        print("'sub' value updated and saved in SharedPreferences: $sub");
+        //print("'sub' value updated and saved in SharedPreferences: $sub");
       }
     } else {
-      print(
-          "'sub' value found in SharedPreferences. No need to fetch from database.");
+      //print("'sub' value found in SharedPreferences. No need to fetch from database.");
     }
   }
 
@@ -181,7 +179,7 @@ class estimated extends State<MapUi> {
         tappedMarkerInfo = 'Estimated Shuttle Arrival: $estimatedArrivalTime';
       });
     } else {
-      print('Failed to fetch travel time: ${response.reasonPhrase}');
+      //print('Failed to fetch travel time: ${response.reasonPhrase}');
     }
   }
 
@@ -206,7 +204,7 @@ class estimated extends State<MapUi> {
   void onPressed() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => DetailsUi(uid: widget.uid ?? "")),
+      MaterialPageRoute(builder: (context) => DetailsUi(uid: widget.uid)),
     );
   }
 
@@ -230,7 +228,7 @@ class estimated extends State<MapUi> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Bus Status : " + message,
+                    "Bus Status : $message",
                     style: const TextStyle(fontSize: 18.0),
                   ),
                 ),
@@ -283,7 +281,7 @@ class estimated extends State<MapUi> {
                 ),
                 markers: {
                   Marker(
-                    markerId: MarkerId('tappedPosition'),
+                    markerId: const MarkerId('tappedPosition'),
                     infoWindow: InfoWindow(title: tappedMarkerInfo),
                     position: tappedPosition,
                   ),
