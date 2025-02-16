@@ -28,11 +28,10 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
    flutter pub get
    ```
 3. **Setup Firebase**:
-   - Add `google-services.json` (for Android) and `GoogleService-Info.plist` (for iOS) to their respective directories.
-   - Enable Firebase Realtime Database.
+   - use [flutterfire Cli](https://firebase.flutter.dev/docs/cli/) for Firebase configuration.
 4. **Setup Google Maps API**:
    - Enable Maps SDK & Distance Matrix API.
-   - Store API key in `.env` file.
+   - Store API key in `api.dart` file.
 5. **Run the App**:
    ```sh
    flutter run
@@ -51,11 +50,6 @@ This Flutter-based shuttle tracking application provides real-time tracking of s
 
 - Open the app & login to share location of your shuttle.
 - you can also change status of ride as well
-  
-## Notes
-
-- The Android folder was accidentally removed and is missing from the project.
-- Ensure the `google-services.json` file is correctly placed before running the app.
 
 ## Contributors
 
